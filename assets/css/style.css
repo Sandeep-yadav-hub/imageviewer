@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.hide{
+    display: none !important;
+}
+
+
+.notification{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px 10px;
+    border: 1px solid transparent;
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    width: 200px;
+    /* height: 40px; */
+    justify-content: space-between;
+}
+.primary{
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+.error{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.success{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.warning{
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.spinner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 100px;
+    transform: translateX(-100%);
+    z-index: 100;
+}
+#jumpTo{
+    padding: 0.45rem 0.7rem;
+    border: 1px solid #696996;
+    border-radius: 5px;
+    width: 50px;
+
+}
+.progessBarContainer{
+    display: none;
+    width: 100vw;
+    position: fixed;
+    top:60px;
+    left:12px
+
+}
+.flex{
+    display: flex !important;
+    justify-content: center;
+}
+.ocrbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #696969;
+    width: 60px;
+    border-radius: 5px;
+    padding: 0 8px;
+    height: 30px;
+    margin-top: 2px;
+}
+canvas {
+    margin-top: 100px;  
+    padding: 5px; 
+}
+button{
+    width: 30px;
+    height: 32px !important;
+    padding: 0.5rem 0.6rem;
+    border-radius:5px;
+    border:0;
+    height: 35%;
+    margin: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b72cf;
+    color:#fff;
+}
+.controlBar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 10px 0px;
+    width: 100vw;
+    display: flex;
+    background: #fff;
+    align-items: center;
+}
+.pageDescription{
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    align-items: center;
+    height: 38px;
+}
+.canvas-container{
+    width: 100vw !important;
+    height: 100vh !important;
+}
+.upper-canvas{
+    padding: 0;
+}
+.lower-canvas{
+    padding: 0;
+}
+.fileName{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}

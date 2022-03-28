@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assets/js/browser-image-compression@1.0.17.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./assets/js/fabric.js"></script>
+    <script src="./assets/js/utiff.js"></script>
+    <script src="./assets/js/pdfworker.js"></script>
+    <script src="./assets/js/pdfjsLib.js"></script>
+    <link href="./assets/css/textLayer.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="//mozilla.github.io/pdf.js/web/viewer.css" rel="stylesheet" type="text/css" /> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="" alt="" id="mySrc" style="display: none;">
+    <div class="spinner hide">
+        <i style="color: #fff;" class="fa-solid fa-spinner fa-spin-pulse"></i>
+    </div>
+    <canvas id="c" ></canvas>
+    <div class="textLayer" style="margin-top:100px"></div>
+    <div class="controlBar" style="justify-content: center;">
+        <div style="display: flex;">
+            <button onCLick="controls('zoomIn')">+</button>
+            <button onCLick="controls('zoomOut')">-</button>
+            <button onCLick="controls('rotateLeft')"><i class="fa-solid fa-rotate-left"></i></button>
+            <button onCLick="controls('rotateRight')"><i class="fa-solid fa-rotate-right"></i></button>
+            <button onCLick="controls('reset')"><i class="fa-solid fa-rotate"></i></button>
+            <div class="ocrbox" style="margin: 5px;">
+                <input type="checkbox" id="OCR" name="OCR" onCLick="controls('OCR')">
+                <p >OCR</p>
+            </div>
+            <p class="fileName"></p>
+            <div class="pageDescription">
+                <p id="pages"></p>
+                <p>of</p>
+                <p id="totalpageNumber"></p>
+            </div>
+            <div style="display: flex;align-items: center;" id="navigationButton">
+                <button onclick="prev()" style="height: initial;"><-</button>
+                <button onclick="next()" style="height: initial;">-></button>
+                <div style="width: 150px;display: flex;align-items: center;">
+                    <input type="number" name="jumpTo" id="jumpTo" placeholder="Page">
+                    <button style="width: 39% !important;" onClick="goTo()">Go To</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="progessBarContainer" >
+        <label style="margin-right: 5px;" for="file"><span class="taskInProgress"></span> progress:<span class="progressValue" style="margin-right: 5px;"></span> <i class="fa-solid fa-circle-notch fa-spin"></i></label>
+        <p  class="progress" ></p>
+    </div>
+    <div class="warning notification hide"  onclick="hideNotification()">
+        <p class="message"></p>
+    </div>
+
+</body>
+<script src="./assets/js/index.js"></script>
+<script>
+    
+</script>
+</html>
