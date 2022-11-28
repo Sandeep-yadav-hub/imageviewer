@@ -695,11 +695,11 @@ const loadfile = async(path)=>{
       path: path
     }
     if (["tiff", "tif","TIFF","TIF"].includes(path.split(".")[path.split(".").length-1])) {
-      loadMockTiffImage("imageviewer.github.io/"+path);
+      loadMockTiffImage(path);
     } else if (["pdf", "PDF"].includes(path.split(".")[path.split(".").length - 1])) {
-      loadPdf("imageviewer.github.io/"+path);
+      loadPdf(path);
     } else {
-      loadImageToCanvas("imageviewer.github.io/"+path);
+      loadImageToCanvas(path);
     }
   }
 }
